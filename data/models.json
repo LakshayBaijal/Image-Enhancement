@@ -1,0 +1,37 @@
+{
+ "about": "Every model the app downloads, pinned by revision and checksum. Nothing here is stored in git; enhancer/models.py fetches each file on first use and checks it.",
+ "sam3": {
+  "use": "step 2 (hand / finger / arm masks) and step 3 (which object is the product)",
+  "repo": "facebook/sam3", "revision": "3c879f39826c281e95690f02c7821c4de09afae7",
+  "license": "SAM License (Meta); gated: the Hugging Face account behind HF_TOKEN must be approved on the model page",
+  "bytes": 3439938512
+ },
+ "birefnet": {
+  "use": "step 3 (pixel-exact edge of the product)",
+  "repo": "ZhengPeng7/BiRefNet", "revision": "e2bf8e4460fc8fa32bba5ea4d94b3233d367b0e4",
+  "license": "MIT", "bytes": 444473596,
+  "note": "loaded with trust_remote_code at this pinned revision"
+ },
+ "lama": {
+  "use": "step 2 on CPU / free hosting (repaints the area under the hand)",
+  "repo": "Carve/LaMa-ONNX", "revision": "c3c0c9e468934d62e79c329e35d82dd09ff8c444",
+  "file": "lama_fp32.onnx", "license": "Apache-2.0", "bytes": 208044816,
+  "sha256": "1faef5301d78db7dda502fe59966957ec4b79dd64e16f03ed96913c7a4eb68d6"
+ },
+ "realesrgan": {
+  "use": "step 5 on CPU / free hosting (4x upscale)",
+  "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth",
+  "file": "RealESRGAN_x4plus.pth", "license": "BSD-3-Clause", "bytes": 67040989,
+  "sha256": "4fa0d38905f75ac06eb49a7951b426670021be3018265fd191d2125df9d682f1"
+ },
+ "ppocr": {
+  "use": "step 4 (SR Check reads every text line)",
+  "models": ["PP-OCRv5_server_det", "en_PP-OCRv5_mobile_rec"],
+  "license": "Apache-2.0",
+  "note": "downloaded by PaddleOCR 3.7 itself on first use"
+ },
+ "gpu_engines": {
+  "flux2": "FLUX.2 Klein 4B + LanPaint on a ComfyUI server (FLUX_COMFY_URL); see README 'GPU engines'",
+  "sdx4_tiger": "SD x4 upscaler + TIGER checkout (SDX4_TIGER_DIR); see README 'GPU engines'"
+ }
+}

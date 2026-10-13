@@ -1,0 +1,19 @@
+# Tested together on Python 3.11 (macOS arm64 and Linux x86_64 CPU), 2026-10-13.
+# On Linux without a GPU, install the CPU build of torch first (the Dockerfile does):
+#   pip install torch==2.14.1 torchvision==0.29.1 --index-url https://download.pytorch.org/whl/cpu
+torch==2.14.1
+torchvision==0.29.1
+transformers==5.17.0       # SAM 3 (Sam3Model)
+timm==1.0.30               # BiRefNet remote code
+einops==0.8.2              # BiRefNet remote code
+kornia==0.8.3              # BiRefNet remote code
+safetensors==0.8.0
+huggingface_hub==1.33.0
+onnxruntime==1.31.0        # LaMa
+paddlepaddle==3.3.1        # SR Check OCR (PP-OCRv5)
+paddleocr==3.7.0           # pulls opencv-contrib-python 4.10 through paddlex
+scipy==1.17.1
+numpy==2.3.5
+pillow==12.3.0
+requests==2.34.2
+streamlit==1.65.0
